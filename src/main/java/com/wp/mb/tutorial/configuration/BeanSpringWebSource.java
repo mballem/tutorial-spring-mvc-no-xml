@@ -3,7 +3,7 @@ package com.wp.mb.tutorial.configuration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
@@ -16,7 +16,7 @@ import org.springframework.web.servlet.view.JstlView;
  */
 @Configuration
 @EnableWebMvc
-public class BeanSpringWebSource extends WebMvcConfigurerAdapter {
+public class BeanSpringWebSource implements WebMvcConfigurer {
 
     private static final String VIEW_RESOLVER_PREFIX = "/WEB-INF/view/";
     private static final String VIEW_RESOLVER_SUFFIX = ".jsp";
